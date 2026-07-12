@@ -1,0 +1,14 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: log-collector-service
+
+splunk:
+  mock-enabled: true
+  mock-url: http://localhost:8083/api/v1/mock/splunk/logs
+
+services:
+  analyzer-url: http://localhost:8081/api/v1/analyzer/logs
+  config-url: http://localhost:8082/api/v1/config
