@@ -1,4 +1,4 @@
-﻿package com.devops.collector.controller;
+package com.devops.collector.controller;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.annotation.PostConstruct;
+import jakarta.annotation.PostConstruct;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +18,6 @@ import java.util.Random;
 
 @RestController
 @RequestMapping("/api/mock-splunk")
-@Profile("dev")
 public class MockSplunkController {
 
     private static final Logger log = LoggerFactory.getLogger(MockSplunkController.class);
