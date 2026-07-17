@@ -10,7 +10,7 @@ COPY log-collector-service/pom.xml log-collector-service/
 COPY notification-service/pom.xml notification-service/
 RUN mvn -pl log-collector-service -am dependency:go-offline -B
 COPY log-collector-service/src log-collector-service/src
-RUN mvn clean package -pl log-collector-service -am -DskipTests
+RUN mvn clean package -pl log-collector-service -DskipTests
 
 FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
